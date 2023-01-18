@@ -20,7 +20,7 @@ class MainCoordinator: NavigationCoordinator {
     
     func start() {
         let listOfMatchesViewController = ListOfMatchesViewController()
-        listOfMatchesViewController.bind(to: self.viewModel!)
+        //listOfMatchesViewController.bind(to: self.viewModel!)
         self.rootViewController.isNavigationBarHidden = true
         self.rootViewController.modalPresentationStyle = .fullScreen
         self.rootViewController.viewControllers = [listOfMatchesViewController]

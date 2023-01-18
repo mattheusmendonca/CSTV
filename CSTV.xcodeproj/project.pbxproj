@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E1E2A4C1EF59D36FFF5DF29 /* Pods_CSTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9172A81E8206DDF8A6E76E /* Pods_CSTV.framework */; };
 		6B508064297652A30086E9E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B508063297652A30086E9E3 /* AppDelegate.swift */; };
 		6B508066297652A30086E9E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B508065297652A30086E9E3 /* SceneDelegate.swift */; };
 		6B50806D297652A30086E9E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B50806C297652A30086E9E3 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2EECE291B2B95C703F54C776 /* Pods-CSTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSTV.release.xcconfig"; path = "Target Support Files/Pods-CSTV/Pods-CSTV.release.xcconfig"; sourceTree = "<group>"; };
 		6B508060297652A30086E9E3 /* CSTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B508063297652A30086E9E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B508065297652A30086E9E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		6B946D042977311300D570FB /* ListOfMatchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMatchesViewModel.swift; sourceTree = "<group>"; };
 		6B946D062977312900D570FB /* DefaultListOfMatchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultListOfMatchesViewModel.swift; sourceTree = "<group>"; };
 		6B946D0929777BF400D570FB /* PandaScoreAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PandaScoreAPI.swift; sourceTree = "<group>"; };
+		E5B7B6679092E2EADDB20348 /* Pods-CSTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSTV.debug.xcconfig"; path = "Target Support Files/Pods-CSTV/Pods-CSTV.debug.xcconfig"; sourceTree = "<group>"; };
+		EB9172A81E8206DDF8A6E76E /* Pods_CSTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +51,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E1E2A4C1EF59D36FFF5DF29 /* Pods_CSTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E2F49748A8710734B76567B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB9172A81E8206DDF8A6E76E /* Pods_CSTV.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6B508057297652A30086E9E3 = {
 			isa = PBXGroup;
 			children = (
 				6B508062297652A30086E9E3 /* CSTV */,
 				6B508061297652A30086E9E3 /* Products */,
+				F09881F7AD4D4F759CCBA5BD /* Pods */,
+				5E2F49748A8710734B76567B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,6 +202,16 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		F09881F7AD4D4F759CCBA5BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5B7B6679092E2EADDB20348 /* Pods-CSTV.debug.xcconfig */,
+				2EECE291B2B95C703F54C776 /* Pods-CSTV.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -194,9 +219,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B508074297652A30086E9E3 /* Build configuration list for PBXNativeTarget "CSTV" */;
 			buildPhases = (
+				61824A0A038E44AC23920C3A /* [CP] Check Pods Manifest.lock */,
 				6B50805C297652A30086E9E3 /* Sources */,
 				6B50805D297652A30086E9E3 /* Frameworks */,
 				6B50805E297652A30086E9E3 /* Resources */,
+				AAC70DA8D4AC5CDC5D30196F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +280,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61824A0A038E44AC23920C3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CSTV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAC70DA8D4AC5CDC5D30196F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CSTV/Pods-CSTV-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CSTV/Pods-CSTV-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CSTV/Pods-CSTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6B50805C297652A30086E9E3 /* Sources */ = {
@@ -402,6 +471,7 @@
 		};
 		6B508075297652A30086E9E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5B7B6679092E2EADDB20348 /* Pods-CSTV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -430,6 +500,7 @@
 		};
 		6B508076297652A30086E9E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EECE291B2B95C703F54C776 /* Pods-CSTV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
