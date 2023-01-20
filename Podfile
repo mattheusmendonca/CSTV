@@ -6,6 +6,8 @@ target 'CSTV' do
   use_frameworks!
 	
   pod 'Moya'
+  pod 'KeychainSwift', '~> 19.0'
+  pod 'Kingfisher'
 
   # Pods for CSTV
 

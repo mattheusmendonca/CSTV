@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4E1E2A4C1EF59D36FFF5DF29 /* Pods_CSTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9172A81E8206DDF8A6E76E /* Pods_CSTV.framework */; };
+		6B4459342979997E004A6311 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4459332979997E004A6311 /* AuthManager.swift */; };
+		6B4459362979998F004A6311 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4459352979998F004A6311 /* KeychainManager.swift */; };
+		6B44593A2979B692004A6311 /* MatchesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4459392979B692004A6311 /* MatchesDataSource.swift */; };
+		6B44593C2979B6AE004A6311 /* RemoteMatchesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B44593B2979B6AE004A6311 /* RemoteMatchesDataSource.swift */; };
+		6B44593E2979B6C2004A6311 /* MatchDetailsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B44593D2979B6C2004A6311 /* MatchDetailsDataSource.swift */; };
+		6B4459402979B6D7004A6311 /* RemoteMatchDetailsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B44593F2979B6D7004A6311 /* RemoteMatchDetailsDataSource.swift */; };
+		6B4459422979C24F004A6311 /* RepositoryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4459412979C24F004A6311 /* RepositoryState.swift */; };
 		6B508064297652A30086E9E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B508063297652A30086E9E3 /* AppDelegate.swift */; };
 		6B508066297652A30086E9E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B508065297652A30086E9E3 /* SceneDelegate.swift */; };
 		6B50806D297652A30086E9E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B50806C297652A30086E9E3 /* Assets.xcassets */; };
@@ -22,6 +29,9 @@
 		6B946D052977311300D570FB /* ListOfMatchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B946D042977311300D570FB /* ListOfMatchesViewModel.swift */; };
 		6B946D072977312900D570FB /* DefaultListOfMatchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B946D062977312900D570FB /* DefaultListOfMatchesViewModel.swift */; };
 		6B946D0A29777BF400D570FB /* PandaScoreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B946D0929777BF400D570FB /* PandaScoreAPI.swift */; };
+		6B9C3F19297A26C200BD4BC0 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9C3F18297A26C200BD4BC0 /* Observable.swift */; };
+		6BA98C49297A1BC9005549DC /* MatchesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA98C48297A1BC9005549DC /* MatchesRepository.swift */; };
+		6BA98C4B297A1C86005549DC /* DefaultMatchesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA98C4A297A1C86005549DC /* DefaultMatchesRepository.swift */; };
 		6BEADCD8297882F100DBDC60 /* DTOMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEADCD7297882F100DBDC60 /* DTOMapper.swift */; };
 		6BEADCE12978CF9300DBDC60 /* MatchesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEADCE02978CF9300DBDC60 /* MatchesService.swift */; };
 		6BEADCE32978CFA800DBDC60 /* RemoteMatchesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEADCE22978CFA800DBDC60 /* RemoteMatchesService.swift */; };
@@ -43,6 +53,13 @@
 
 /* Begin PBXFileReference section */
 		2EECE291B2B95C703F54C776 /* Pods-CSTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSTV.release.xcconfig"; path = "Target Support Files/Pods-CSTV/Pods-CSTV.release.xcconfig"; sourceTree = "<group>"; };
+		6B4459332979997E004A6311 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		6B4459352979998F004A6311 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		6B4459392979B692004A6311 /* MatchesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesDataSource.swift; sourceTree = "<group>"; };
+		6B44593B2979B6AE004A6311 /* RemoteMatchesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMatchesDataSource.swift; sourceTree = "<group>"; };
+		6B44593D2979B6C2004A6311 /* MatchDetailsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsDataSource.swift; sourceTree = "<group>"; };
+		6B44593F2979B6D7004A6311 /* RemoteMatchDetailsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMatchDetailsDataSource.swift; sourceTree = "<group>"; };
+		6B4459412979C24F004A6311 /* RepositoryState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryState.swift; sourceTree = "<group>"; };
 		6B508060297652A30086E9E3 /* CSTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B508063297652A30086E9E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B508065297652A30086E9E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +76,9 @@
 		6B946D042977311300D570FB /* ListOfMatchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMatchesViewModel.swift; sourceTree = "<group>"; };
 		6B946D062977312900D570FB /* DefaultListOfMatchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultListOfMatchesViewModel.swift; sourceTree = "<group>"; };
 		6B946D0929777BF400D570FB /* PandaScoreAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PandaScoreAPI.swift; sourceTree = "<group>"; };
+		6B9C3F18297A26C200BD4BC0 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		6BA98C48297A1BC9005549DC /* MatchesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesRepository.swift; sourceTree = "<group>"; };
+		6BA98C4A297A1C86005549DC /* DefaultMatchesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMatchesRepository.swift; sourceTree = "<group>"; };
 		6BEADCD7297882F100DBDC60 /* DTOMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOMapper.swift; sourceTree = "<group>"; };
 		6BEADCE02978CF9300DBDC60 /* MatchesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesService.swift; sourceTree = "<group>"; };
 		6BEADCE22978CFA800DBDC60 /* RemoteMatchesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMatchesService.swift; sourceTree = "<group>"; };
@@ -98,6 +118,33 @@
 				EB9172A81E8206DDF8A6E76E /* Pods_CSTV.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B4459322979996A004A6311 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				6B4459332979997E004A6311 /* AuthManager.swift */,
+				6B4459352979998F004A6311 /* KeychainManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		6B4459372979B65B004A6311 /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				6B4459392979B692004A6311 /* MatchesDataSource.swift */,
+				6B44593B2979B6AE004A6311 /* RemoteMatchesDataSource.swift */,
+			);
+			path = Matches;
+			sourceTree = "<group>";
+		};
+		6B4459382979B665004A6311 /* MatchDetails */ = {
+			isa = PBXGroup;
+			children = (
+				6B44593D2979B6C2004A6311 /* MatchDetailsDataSource.swift */,
+				6B44593F2979B6D7004A6311 /* RemoteMatchDetailsDataSource.swift */,
+			);
+			path = MatchDetails;
 			sourceTree = "<group>";
 		};
 		6B508057297652A30086E9E3 = {
@@ -177,6 +224,9 @@
 		6B946CEA29771F4F00D570FB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6B9C3F17297A26B400BD4BC0 /* Coordinator */,
+				6B9C3F16297A26AA00BD4BC0 /* Observable */,
+				6B4459322979996A004A6311 /* Manager */,
 				6B946CFC2977281700D570FB /* Coordinator.swift */,
 			);
 			path = Common;
@@ -235,6 +285,37 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		6B9C3F16297A26AA00BD4BC0 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				6B9C3F18297A26C200BD4BC0 /* Observable.swift */,
+			);
+			path = Observable;
+			sourceTree = "<group>";
+		};
+		6B9C3F17297A26B400BD4BC0 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		6BA98C46297A1BAA005549DC /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				6BA98C48297A1BC9005549DC /* MatchesRepository.swift */,
+				6BA98C4A297A1C86005549DC /* DefaultMatchesRepository.swift */,
+			);
+			path = Matches;
+			sourceTree = "<group>";
+		};
+		6BA98C47297A1BB1005549DC /* MatchDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MatchDetails;
+			sourceTree = "<group>";
+		};
 		6BEADCD5297882BA00DBDC60 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +353,8 @@
 		6BEADCDB2978C40A00DBDC60 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				6B4459372979B65B004A6311 /* Matches */,
+				6B4459382979B665004A6311 /* MatchDetails */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -279,6 +362,9 @@
 		6BEADCDC2978C41800DBDC60 /* Repository  */ = {
 			isa = PBXGroup;
 			children = (
+				6BA98C46297A1BAA005549DC /* Matches */,
+				6BA98C47297A1BB1005549DC /* MatchDetails */,
+				6B4459412979C24F004A6311 /* RepositoryState.swift */,
 			);
 			path = "Repository ";
 			sourceTree = "<group>";
@@ -467,6 +553,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B946CF4297724F500D570FB /* ListOfMatchesViewController.swift in Sources */,
+				6B4459342979997E004A6311 /* AuthManager.swift in Sources */,
+				6B4459402979B6D7004A6311 /* RemoteMatchDetailsDataSource.swift in Sources */,
 				6BEADD072978F9A400DBDC60 /* MatchDetailsResponse.swift in Sources */,
 				6B946D052977311300D570FB /* ListOfMatchesViewModel.swift in Sources */,
 				6B946CEC29771F9E00D570FB /* AppCoordinator.swift in Sources */,
@@ -477,16 +565,24 @@
 				6BEADCFB2978E1FE00DBDC60 /* TeamsDetails.swift in Sources */,
 				6BEADD052978E96A00DBDC60 /* LeagueResponse.swift in Sources */,
 				6BEADCF22978D8F900DBDC60 /* Matches.swift in Sources */,
+				6BA98C49297A1BC9005549DC /* MatchesRepository.swift in Sources */,
 				6BEADCE32978CFA800DBDC60 /* RemoteMatchesService.swift in Sources */,
+				6B4459362979998F004A6311 /* KeychainManager.swift in Sources */,
 				6BEADCE52978CFC400DBDC60 /* MatchDetailsService.swift in Sources */,
+				6B44593C2979B6AE004A6311 /* RemoteMatchesDataSource.swift in Sources */,
 				6BEADCD8297882F100DBDC60 /* DTOMapper.swift in Sources */,
+				6BA98C4B297A1C86005549DC /* DefaultMatchesRepository.swift in Sources */,
 				6BEADD032978E70300DBDC60 /* AdversarySpecificationsResponse.swift in Sources */,
 				6BEADCF42978DB4200DBDC60 /* AdversarySpecifications.swift in Sources */,
+				6B44593A2979B692004A6311 /* MatchesDataSource.swift in Sources */,
 				6BEADD09297905C600DBDC60 /* MatchTeamsDetailsResponse.swift in Sources */,
+				6B44593E2979B6C2004A6311 /* MatchDetailsDataSource.swift in Sources */,
 				6B946D072977312900D570FB /* DefaultListOfMatchesViewModel.swift in Sources */,
 				6BEADCE72978CFDC00DBDC60 /* RemoteMatchDetailsService.swift in Sources */,
+				6B4459422979C24F004A6311 /* RepositoryState.swift in Sources */,
 				6BEADCFF2978E40200DBDC60 /* AdversaryResponse.swift in Sources */,
 				6B508064297652A30086E9E3 /* AppDelegate.swift in Sources */,
+				6B9C3F19297A26C200BD4BC0 /* Observable.swift in Sources */,
 				6B508066297652A30086E9E3 /* SceneDelegate.swift in Sources */,
 				6BEADCE12978CF9300DBDC60 /* MatchesService.swift in Sources */,
 				6B946D0229772F9C00D570FB /* ListOfMatchesTableViewCell.swift in Sources */,
