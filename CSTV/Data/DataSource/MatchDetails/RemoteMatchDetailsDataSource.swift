@@ -20,7 +20,7 @@ class RemoteMatchDetailsDataSource: MatchDetailsDataSource {
             switch result {
             case .success(let teamsResponse):
                 let teamsMapped = teamsResponse.map {
-                    MatchDetailsResponseMapper.map($0)
+                    MatchTeamsDetailsResponseMapper.map($0)
                 }
                 completion(.success(teamsMapped))
             case .failure(let error):

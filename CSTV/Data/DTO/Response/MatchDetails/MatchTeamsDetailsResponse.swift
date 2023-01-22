@@ -19,7 +19,7 @@ struct MatchTeamsDetailsResponse: Codable {
     }
 }
 
-struct MatchTeamsDetailsResponseMapper: Codable {
+struct MatchTeamsDetailsResponseMapper: DTOMapper {
     static func map(_ dto: MatchTeamsDetailsResponse) -> TeamsDetails {
         
         var url: URL? = nil
@@ -33,6 +33,6 @@ struct MatchTeamsDetailsResponseMapper: Codable {
             players.append(MatchDetailsResponseMapper.map(player))
         }
                            
-        return TeamsDetails(id: dto.id, name: dto.name, players: players, imageUrl: url)
+        return TeamsDetails(id: dto.id, name: dto.name, imageUrl: url, players: players)
     }
 }

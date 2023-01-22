@@ -12,4 +12,6 @@ enum RepositoryState<ErrorType: Equatable>: Equatable {
     case loading
     case loaded
     case error(_ error: ErrorType)
+    case deleted
+    case updated
 }

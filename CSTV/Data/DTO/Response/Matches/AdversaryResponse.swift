@@ -9,6 +9,10 @@ import Foundation
 
 struct AdversaryResponse: Codable {
     let adversary: AdversarySpecificationsResponse
+    
+    private enum CodingKeys: String, CodingKey {
+        case adversary = "opponent"
+    }
 }
 
 struct AdversaryResponseMapper: DTOMapper {

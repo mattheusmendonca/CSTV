@@ -8,5 +8,5 @@
 import Foundation
 
 protocol MatchDetailsService {
-    func getAllTeams(page: Int, completion: @escaping (_ result: Result<[MatchDetailsResponse], MatchDetailsErrorMessage>) -> Void)
+    func getAllTeams(page: Int, completion: @escaping (_ result: Result<[MatchTeamsDetailsResponse], MatchDetailsErrorMessage>) -> Void)
 }

@@ -14,8 +14,9 @@ struct MatchesResponse: Codable {
     let status: String
     
     private enum CodingKeys: String, CodingKey {
-        case adversary, league, status
+        case league, status
         case date = "begin_at"
+        case adversary = "opponents"
     }
 }
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum NotificationsRepositoryError: Error, Equatable {
+enum MatchesRepositoryError: Error, Equatable {
     case generic(errorMessage: String)
 }
 
@@ -18,6 +18,6 @@ protocol MatchesRepository {
     var matches: Observable<[Matches]> { get }
     
     func refresh()
-    case getNextMatches()
-    case getMatchesHappening()
+    func getNextMatches()
+    func getMatchesHappening()
 }

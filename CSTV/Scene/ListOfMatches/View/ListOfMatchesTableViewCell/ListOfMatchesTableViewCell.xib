@@ -1,21 +1,163 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ListOfMatchesTableViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listOfMatchesCell" id="KGk-i7-Jjw" customClass="ListOfMatchesTableViewCell" customModule="CSTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="360" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7S-w4-c7T" userLabel="Container View">
+                        <rect key="frame" x="24" y="12" width="312" height="176"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="82" translatesAutoresizingMaskIntoConstraints="NO" id="OCB-k4-Xgc" userLabel="Stack View Label Teams">
+                                <rect key="frame" x="83.666666666666686" y="113.66666666666667" width="144" height="12"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9o-UR-nQa" userLabel="First Team">
+                                        <rect key="frame" x="0.0" y="0.0" width="31" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="31" id="X41-rf-wCG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rxc-Ky-eBH" userLabel="Second Team">
+                                        <rect key="frame" x="113" y="0.0" width="31" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="31" id="4LS-iH-1HX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="lfw-oM-BbU"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="LXA-DG-skA" userLabel="Stack View Teams Image">
+                                <rect key="frame" x="69" y="43.666666666666657" width="173" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QpD-qk-wd2" userLabel="First Team">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="DkD-cG-gS3"/>
+                                            <constraint firstAttribute="height" constant="60" id="qV8-uO-xCP"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5v6-DL-Wyc" userLabel="Second Team">
+                                        <rect key="frame" x="113" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="5nM-3g-31S"/>
+                                            <constraint firstAttribute="width" constant="60" id="Tqu-fg-jgi"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtw-Jc-MrZ">
+                                <rect key="frame" x="145.66666666666666" y="77.666666666666671" width="13" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="13" id="HuR-0d-qqt"/>
+                                    <constraint firstAttribute="height" constant="14" id="izU-v2-xhE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="9"/>
+                                <color key="textColor" name="LabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xYI-nK-y3f" userLabel="Division">
+                                <rect key="frame" x="0.0" y="144" width="312" height="1"/>
+                                <color key="backgroundColor" name="DivisionColor"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bfa-WO-Gdl" userLabel="Stack View League">
+                                <rect key="frame" x="15" y="152" width="76" height="16"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fa2-5a-ghG">
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="btt-hG-YgT"/>
+                                            <constraint firstAttribute="width" constant="16" id="d5L-aR-Sb8"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="League + serie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vqj-xt-bDn">
+                                        <rect key="frame" x="24" y="0.0" width="52" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="52" id="dr4-4r-XPV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zr3-GQ-3It"/>
+                        <color key="backgroundColor" name="CellColor"/>
+                        <constraints>
+                            <constraint firstItem="zr3-GQ-3It" firstAttribute="bottom" secondItem="rtw-Jc-MrZ" secondAttribute="bottom" constant="84.5" id="247-yA-WY2"/>
+                            <constraint firstItem="zr3-GQ-3It" firstAttribute="trailing" secondItem="rtw-Jc-MrZ" secondAttribute="trailing" constant="153.5" id="5ks-uA-ZBt"/>
+                            <constraint firstAttribute="trailing" secondItem="xYI-nK-y3f" secondAttribute="trailing" id="Abt-cb-64a"/>
+                            <constraint firstItem="zr3-GQ-3It" firstAttribute="trailing" secondItem="OCB-k4-Xgc" secondAttribute="trailing" constant="84.5" id="Cml-tP-Nu9"/>
+                            <constraint firstItem="zr3-GQ-3It" firstAttribute="trailing" secondItem="LXA-DG-skA" secondAttribute="trailing" constant="70" id="MVG-Ml-RFG"/>
+                            <constraint firstItem="zr3-GQ-3It" firstAttribute="bottom" secondItem="xYI-nK-y3f" secondAttribute="bottom" constant="31" id="NE4-t0-of2"/>
+                            <constraint firstItem="LXA-DG-skA" firstAttribute="leading" secondItem="zr3-GQ-3It" secondAttribute="leading" constant="69" id="TDi-vZ-P3t"/>
+                            <constraint firstItem="xYI-nK-y3f" firstAttribute="leading" secondItem="U7S-w4-c7T" secondAttribute="leading" id="XS9-NP-xDo"/>
+                            <constraint firstItem="bfa-WO-Gdl" firstAttribute="leading" secondItem="zr3-GQ-3It" secondAttribute="leading" constant="15" id="iTY-fN-ykD"/>
+                            <constraint firstItem="xYI-nK-y3f" firstAttribute="top" secondItem="OCB-k4-Xgc" secondAttribute="bottom" constant="18.5" id="kMV-EO-Fo3"/>
+                            <constraint firstItem="OCB-k4-Xgc" firstAttribute="leading" secondItem="zr3-GQ-3It" secondAttribute="leading" constant="83.5" id="lXg-vL-76M"/>
+                            <constraint firstItem="zr3-GQ-3It" firstAttribute="bottom" secondItem="bfa-WO-Gdl" secondAttribute="bottom" constant="8" id="qeZ-OQ-1I0"/>
+                            <constraint firstItem="rtw-Jc-MrZ" firstAttribute="top" secondItem="zr3-GQ-3It" secondAttribute="top" constant="77.5" id="r6k-eu-WHv"/>
+                            <constraint firstItem="rtw-Jc-MrZ" firstAttribute="leading" secondItem="zr3-GQ-3It" secondAttribute="leading" constant="145.5" id="rmL-x4-itP"/>
+                            <constraint firstItem="LXA-DG-skA" firstAttribute="top" secondItem="zr3-GQ-3It" secondAttribute="top" constant="43.5" id="wDe-PB-XZv"/>
+                            <constraint firstItem="OCB-k4-Xgc" firstAttribute="top" secondItem="LXA-DG-skA" secondAttribute="bottom" constant="10" id="zR5-gB-Az9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="BackgroundColor"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="U7S-w4-c7T" secondAttribute="trailing" constant="24" id="5ti-IZ-pZv"/>
+                    <constraint firstItem="U7S-w4-c7T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="DU0-5M-NgQ"/>
+                    <constraint firstItem="U7S-w4-c7T" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="dES-cH-FbC"/>
+                    <constraint firstAttribute="bottom" secondItem="U7S-w4-c7T" secondAttribute="bottom" constant="12" id="qKY-uG-ycP"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="containerView" destination="U7S-w4-c7T" id="qeV-MP-oc9"/>
+                <outlet property="firsTeamNameLabel" destination="S9o-UR-nQa" id="XPH-Qk-Ghr"/>
+                <outlet property="firstTeamImageView" destination="QpD-qk-wd2" id="ppK-rl-pf8"/>
+                <outlet property="leagueImageView" destination="fa2-5a-ghG" id="aVP-XI-p3I"/>
+                <outlet property="leagueNameLabel" destination="Vqj-xt-bDn" id="wAg-Vc-TP5"/>
+                <outlet property="secondTeamImageView" destination="5v6-DL-Wyc" id="3tr-bH-7Cs"/>
+                <outlet property="secondTeamNameLabel" destination="Rxc-Ky-eBH" id="EBh-Zr-tL2"/>
+                <outlet property="vsLabel" destination="rtw-Jc-MrZ" id="B4s-MU-CU9"/>
+            </connections>
+            <point key="canvasLocation" x="131.29770992366412" y="-11.267605633802818"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="0.14509803921568629" green="0.14509803921568629" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CellColor">
+            <color red="0.15294117647058825" green="0.14901960784313725" blue="0.22352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DivisionColor">
+            <color red="1" green="1" blue="1" alpha="0.20000000298023224" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LabelColor">
+            <color red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

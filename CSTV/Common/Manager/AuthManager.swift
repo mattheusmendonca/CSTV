@@ -10,17 +10,10 @@ import Moya
 
 class AccessTokenPluginManager {
     static let shared = AccessTokenPluginManager()
-
-    let authPlugin = AccessTokenPlugin { _ in
-        AuthManager.shared.userRepository.currentUser.value?.token.components(separatedBy: " ")[1] ?? ""
+    
+    let authPlugin = AccessTokenPlugin { _ in 
+        "nwcYIRxJtCFh7KMSg3Le9zpFCb0oFgfZWpNXZ9Nz4HXKnAA2wCg"
     }
 }
 
-final class AuthManager {
-    
-    static let shared = AuthManager()
-    //let userRepository: UserRepository = DefaultUserRepository()
-    //let formRepository: FormRepository = DefaultFormRepository()
-    
-    private init() {}
-}
+

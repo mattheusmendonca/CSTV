@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 class MainCoordinator: NavigationCoordinator {
-    
     var isCompleted: (() -> Void)?
     var rootViewController: UINavigationController
     var childCoordinators = [Coordinator]()
@@ -20,7 +19,8 @@ class MainCoordinator: NavigationCoordinator {
     
     func start() {
         let listOfMatchesViewController = ListOfMatchesViewController()
-        //listOfMatchesViewController.bind(to: self.viewModel!)
+        let listOfMatchesViewModel = DefaultListOfMatchesViewModel(coordinator: self)
+        listOfMatchesViewController.bind(to: listOfMatchesViewModel)
         self.rootViewController.isNavigationBarHidden = true
         self.rootViewController.modalPresentationStyle = .fullScreen
         self.rootViewController.viewControllers = [listOfMatchesViewController]

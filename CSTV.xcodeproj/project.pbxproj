@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4E1E2A4C1EF59D36FFF5DF29 /* Pods_CSTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9172A81E8206DDF8A6E76E /* Pods_CSTV.framework */; };
+		6B18F856297C5E83001991DB /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = 6B18F855297C5E83001991DB /* Roboto */; };
+		6B18F859297CBCBB001991DB /* ViewModelBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B18F858297CBCBB001991DB /* ViewModelBindable.swift */; };
 		6B4459342979997E004A6311 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4459332979997E004A6311 /* AuthManager.swift */; };
 		6B4459362979998F004A6311 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4459352979998F004A6311 /* KeychainManager.swift */; };
 		6B44593A2979B692004A6311 /* MatchesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4459392979B692004A6311 /* MatchesDataSource.swift */; };
@@ -49,10 +51,14 @@
 		6BEADD052978E96A00DBDC60 /* LeagueResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEADD042978E96A00DBDC60 /* LeagueResponse.swift */; };
 		6BEADD072978F9A400DBDC60 /* MatchDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEADD062978F9A400DBDC60 /* MatchDetailsResponse.swift */; };
 		6BEADD09297905C600DBDC60 /* MatchTeamsDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEADD08297905C600DBDC60 /* MatchTeamsDetailsResponse.swift */; };
+		6BF55EAC297B0EBB0042EFEE /* MatchDetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF55EAB297B0EBB0042EFEE /* MatchDetailsRepository.swift */; };
+		6BF55EAE297B0ED40042EFEE /* DefaultMatchDetailsRepository .swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF55EAD297B0ED40042EFEE /* DefaultMatchDetailsRepository .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2EECE291B2B95C703F54C776 /* Pods-CSTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSTV.release.xcconfig"; path = "Target Support Files/Pods-CSTV/Pods-CSTV.release.xcconfig"; sourceTree = "<group>"; };
+		6B18F855297C5E83001991DB /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto; sourceTree = "<group>"; };
+		6B18F858297CBCBB001991DB /* ViewModelBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindable.swift; sourceTree = "<group>"; };
 		6B4459332979997E004A6311 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		6B4459352979998F004A6311 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		6B4459392979B692004A6311 /* MatchesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesDataSource.swift; sourceTree = "<group>"; };
@@ -96,6 +102,8 @@
 		6BEADD042978E96A00DBDC60 /* LeagueResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueResponse.swift; sourceTree = "<group>"; };
 		6BEADD062978F9A400DBDC60 /* MatchDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsResponse.swift; sourceTree = "<group>"; };
 		6BEADD08297905C600DBDC60 /* MatchTeamsDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTeamsDetailsResponse.swift; sourceTree = "<group>"; };
+		6BF55EAB297B0EBB0042EFEE /* MatchDetailsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsRepository.swift; sourceTree = "<group>"; };
+		6BF55EAD297B0ED40042EFEE /* DefaultMatchDetailsRepository .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultMatchDetailsRepository .swift"; sourceTree = "<group>"; };
 		E5B7B6679092E2EADDB20348 /* Pods-CSTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSTV.debug.xcconfig"; path = "Target Support Files/Pods-CSTV/Pods-CSTV.debug.xcconfig"; sourceTree = "<group>"; };
 		EB9172A81E8206DDF8A6E76E /* Pods_CSTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,6 +126,14 @@
 				EB9172A81E8206DDF8A6E76E /* Pods_CSTV.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B18F857297CBC9F001991DB /* ViewModelBindable */ = {
+			isa = PBXGroup;
+			children = (
+				6B18F858297CBCBB001991DB /* ViewModelBindable.swift */,
+			);
+			path = ViewModelBindable;
 			sourceTree = "<group>";
 		};
 		6B4459322979996A004A6311 /* Manager */ = {
@@ -224,10 +240,11 @@
 		6B946CEA29771F4F00D570FB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6B18F857297CBC9F001991DB /* ViewModelBindable */,
+				6B18F855297C5E83001991DB /* Roboto */,
 				6B9C3F17297A26B400BD4BC0 /* Coordinator */,
 				6B9C3F16297A26AA00BD4BC0 /* Observable */,
 				6B4459322979996A004A6311 /* Manager */,
-				6B946CFC2977281700D570FB /* Coordinator.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -296,6 +313,7 @@
 		6B9C3F17297A26B400BD4BC0 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				6B946CFC2977281700D570FB /* Coordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -312,6 +330,8 @@
 		6BA98C47297A1BB1005549DC /* MatchDetails */ = {
 			isa = PBXGroup;
 			children = (
+				6BF55EAB297B0EBB0042EFEE /* MatchDetailsRepository.swift */,
+				6BF55EAD297B0ED40042EFEE /* DefaultMatchDetailsRepository .swift */,
 			);
 			path = MatchDetails;
 			sourceTree = "<group>";
@@ -496,6 +516,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B18F856297C5E83001991DB /* Roboto in Resources */,
 				6B946D0329772F9C00D570FB /* ListOfMatchesTableViewCell.xib in Resources */,
 				6B508070297652A30086E9E3 /* LaunchScreen.storyboard in Resources */,
 				6B50806D297652A30086E9E3 /* Assets.xcassets in Resources */,
@@ -568,8 +589,10 @@
 				6BA98C49297A1BC9005549DC /* MatchesRepository.swift in Sources */,
 				6BEADCE32978CFA800DBDC60 /* RemoteMatchesService.swift in Sources */,
 				6B4459362979998F004A6311 /* KeychainManager.swift in Sources */,
+				6BF55EAC297B0EBB0042EFEE /* MatchDetailsRepository.swift in Sources */,
 				6BEADCE52978CFC400DBDC60 /* MatchDetailsService.swift in Sources */,
 				6B44593C2979B6AE004A6311 /* RemoteMatchesDataSource.swift in Sources */,
+				6BF55EAE297B0ED40042EFEE /* DefaultMatchDetailsRepository .swift in Sources */,
 				6BEADCD8297882F100DBDC60 /* DTOMapper.swift in Sources */,
 				6BA98C4B297A1C86005549DC /* DefaultMatchesRepository.swift in Sources */,
 				6BEADD032978E70300DBDC60 /* AdversarySpecificationsResponse.swift in Sources */,
@@ -589,6 +612,7 @@
 				6BEADCF62978DF0D00DBDC60 /* League.swift in Sources */,
 				6BEADCFD2978E22D00DBDC60 /* Players.swift in Sources */,
 				6B946CFD2977281700D570FB /* Coordinator.swift in Sources */,
+				6B18F859297CBCBB001991DB /* ViewModelBindable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,10 +756,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CSTV/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -761,10 +785,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CSTV/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

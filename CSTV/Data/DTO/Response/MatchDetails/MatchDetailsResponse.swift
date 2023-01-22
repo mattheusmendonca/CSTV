@@ -30,6 +30,6 @@ struct MatchDetailsResponseMapper: DTOMapper {
             url = URL(string: urlString)
         }
         
-        return Players(nickname: dto.nicknamePlayer, firstName: dto.firstNamePlayer, lastName: dto.lastNamePlayer, imageUrl: url)
+        return Players(firstName: dto.firstNamePlayer, lastName: dto.lastNamePlayer, nickname: dto.nicknamePlayer, imageUrl: url)
     }
 }

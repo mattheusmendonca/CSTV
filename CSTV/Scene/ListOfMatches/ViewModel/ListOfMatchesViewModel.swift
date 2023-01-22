@@ -14,7 +14,8 @@ protocol ListOfMatchesViewModelInput {
 }
 
 protocol ListOfMatchesViewModelOutput {
-    
+    var listMatches: Observable<[Matches]> { get }
+    var finishLoading: Observable<Bool> { get }
 }
 
 protocol ListOfMatchesViewModel: ListOfMatchesViewModelInput & ListOfMatchesViewModelOutput {}

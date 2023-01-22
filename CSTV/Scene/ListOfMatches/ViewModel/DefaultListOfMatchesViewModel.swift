@@ -8,51 +8,46 @@
 import Foundation
 
 class DefaultListOfMatchesViewModel: ListOfMatchesViewModel {
+    private let matchesRepository: MatchesRepository
+    let listMatches: Observable<[Matches]> = .init([])
+    let finishLoading: Observable<Bool> = .init(false)
     
     weak var coordinator: MainCoordinator?
     
-    private let matchesRepository: MatchesRepository
-    let matches: Observable<[Matches]> = .init([])
-    let finishLoading: Observable<Bool> = .init(false)
-    
-    
-    
-    init(coordinator: MainCoordinator, listOfMatchesRepository: MatchesRepository = DefaultListOfMatchesRepository()) {
+    init(coordinator: MainCoordinator, matchesRepository: MatchesRepository = DefaultMatchesRepository()) {
         self.coordinator = coordinator
         self.matchesRepository = matchesRepository
         self.bind(to: matchesRepository)
-        self.getMatches()
+        self.getListOfMatches()
     }
     
-    private func bind(to matchesRespository: MatchesRepository) {
+    private func didLoadMatches(state: MatchesRepositoryState) {
+        self.finishLoading.value = state == .loaded
+    }
+    
+    private func bind(to matchesRepository: MatchesRepository) {
         matchesRepository.matches.addAndNotify(observer: self) { [weak self] matches in
-            self?.matches.value = matches
+            self?.listMatches.value = matches
         }
-        matchesRespository.state.addAndNotify(observer: self) { [weak self] state in
+        matchesRepository.state.addAndNotify(observer: self) { [weak self] state in
             self?.didLoadMatches(state: state)
         }
     }
     
-    private func didLoadListOfMatches(state: MatchesRepositoryState) {
-        self.finishLoading.value = state == .loaded
+    func getListOfMatches() {
+        self.matchesRepository.getMatchesHappening()
+        self.matchesRepository.getNextMatches()
     }
     
-    func getMatches() {
-        self.matchesRepository.getRunningMatches()
-        self.matchesRepository.getUpcomingMatches()
-    }
-    
-    func refreshMatches() {
+    func refreshListOfMatches() {
         self.matchesRepository.refresh()
     }
     
     func pagination(indexPath: IndexPath) {
-        if indexPath.row == self.matches.value.count - 1 {
-            self.matchesRepository.getUpcomingMatches()
+        if indexPath.row == self.listMatches.value.count - 1 {
+            self.matchesRepository.getMatchesHappening()
         }
     }
     
-    func goToDetails(match: Matches) {
-        self.coordinator?.goToDetails(match: match)
-    }
+    
 }

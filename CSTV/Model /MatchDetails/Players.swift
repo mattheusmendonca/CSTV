@@ -8,8 +8,8 @@
 import Foundation
 
 struct Players: Codable {
-    let nickname: String
     let firstName: String?
     let lastName: String?
+    let nickname: String
     let imageUrl: URL?
 }

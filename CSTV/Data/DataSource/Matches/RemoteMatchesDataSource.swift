@@ -19,11 +19,13 @@ class RemoteMatchesDataSource: MatchesDataSource {
             
             switch result {
             case .success(let matchesResponse):
-                let matchesMapped = matchesReponse.map {
+                print("RESPONDE DATA SOURCE 1: \(matchesResponse) \n\n")
+                let matchesMapped = matchesResponse.map {
                     MatchesResponseMapper.map($0)
                 }
                 completion(.success(matchesMapped))
             case .failure(let error):
+                print(error.localizedDescription)
                 completion(.failure(error))
             }
         }
@@ -35,11 +37,13 @@ class RemoteMatchesDataSource: MatchesDataSource {
             
             switch result {
             case .success(let matchesResponse):
-                let matchesMapped = matchesReponse.map {
+                print("RESPONDE SERVICE : \(matchesResponse) \n\n")
+                let matchesMapped = matchesResponse.map {
                     MatchesResponseMapper.map($0)
                 }
                 completion(.success(matchesMapped))
             case .failure(let error):
+                print("\(error.localizedDescription) erro no segundo ")
                 completion(.failure(error))
             }
         }

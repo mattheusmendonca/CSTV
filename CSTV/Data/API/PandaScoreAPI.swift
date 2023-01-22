@@ -14,7 +14,15 @@ enum PandaScoreAPI {
     case getAllTeams(page: Int)
 }
 
-extension PandaScoreAPI: TargetType {
+extension PandaScoreAPI: TargetType, AccessTokenAuthorizable {
+    
+    var authorizationType: AuthorizationType? {
+        switch self {
+        case .getNextMatches, .getMatchesHappening, .getAllTeams:
+            return .bearer
+        }
+    }
+    
     var baseURL: URL {
         URL(string: "https://api.pandascore.co")!
     }

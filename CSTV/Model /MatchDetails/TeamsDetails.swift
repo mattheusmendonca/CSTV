@@ -10,6 +10,6 @@ import Foundation
 struct TeamsDetails: Codable {
     let id: Int
     let name: String
-    let players: [Players]
     let imageUrl: URL?
+    let players: [Players]
 }

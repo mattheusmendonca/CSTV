@@ -13,14 +13,24 @@ struct MatchDetailsErrorMessage: Codable, Error {
 }
 
 class RemoteMatchDetailsService: MatchDetailsService {
-    func getAllTeams(page: Int, completion: @escaping (Result<[MatchDetailsResponse], MatchDetailsErrorMessage>) -> Void) {
-        
+    
+    private let provider = MoyaProvider<PandaScoreAPI>(plugins: [AccessTokenPluginManager.shared.authPlugin])
+    
+    func getAllTeams(page: Int, completion: @escaping (Result<[MatchTeamsDetailsResponse], MatchDetailsErrorMessage>) -> Void) {
         self.provider.request(.getAllTeams(page: page)) { result in
             switch result {
             case .success(let response):
-                completion(success(response))
+                
+                do {
+                    let allTeams = try response.map([MatchTeamsDetailsResponse].self)
+                    completion(.success(allTeams))
+                }
+                catch {
+                    let errorResponse = try? response.map(MatchDetailsErrorMessage.self)
+                    completion(.failure(errorResponse ?? MatchDetailsErrorMessage(message: error.localizedDescription)))
+                }
             case .failure(let error):
-                completion(.failure(MatchesErrorMessage(message: error.localizedDescription)))
+                completion(.failure(MatchDetailsErrorMessage(message: error.localizedDescription)))
             }
         }
     }
