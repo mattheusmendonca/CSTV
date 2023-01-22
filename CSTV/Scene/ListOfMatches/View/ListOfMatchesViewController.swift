@@ -8,11 +8,11 @@
 import UIKit
 
 class ListOfMatchesViewController: UIViewController, ViewModelBindable {
-    
     var viewModel: ListOfMatchesViewModel?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicatorMatches: UIActivityIndicatorView!
+    @IBOutlet weak var matchesLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class ListOfMatchesViewController: UIViewController, ViewModelBindable {
     }
     
     func setupElements() {
-        //configuration font label Roboto
+        self.matchesLabel.font = UIFont.init(name: "Roboto-Regular", size: 32)
 
     }
     
@@ -67,12 +67,12 @@ extension ListOfMatchesViewController: UITableViewDelegate, UITableViewDataSourc
         return UITableViewCell()
     }
     
-    //func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        //self.viewModel?.pagination(indexPath: indexPath)
-    //}
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        self.viewModel?.pagination(indexPath: indexPath)
+    }
     
-    //func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //guard let match = self.viewModel?.listMatches.value[indexPath.row] else { return }
-        //go to details, remember 
-    //}
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let match = self.viewModel?.listMatches.value[indexPath.row] else { return }
+        self.viewModel?.goToMatchesDetails(match: match)
+    }
 }

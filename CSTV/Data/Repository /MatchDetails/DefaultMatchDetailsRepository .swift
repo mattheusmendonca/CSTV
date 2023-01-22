@@ -35,7 +35,6 @@ class DefaultMatchDetailsRepository: MatchDetailsRepository {
                             }
                         }
                     }
-                
                 case .failure(let error):
                     self?.state.value = .error(.generic(errorMessage: error.message))
                 }

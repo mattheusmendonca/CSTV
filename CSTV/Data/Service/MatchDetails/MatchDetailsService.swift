@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct MatchDetailsErrorMessage: Codable, Error {
+    let message: String
+}
+
 protocol MatchDetailsService {
     func getAllTeams(page: Int, completion: @escaping (_ result: Result<[MatchTeamsDetailsResponse], MatchDetailsErrorMessage>) -> Void)
 }

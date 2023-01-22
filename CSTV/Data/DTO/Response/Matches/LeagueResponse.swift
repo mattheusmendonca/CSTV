@@ -19,7 +19,6 @@ struct LeagueResponse: Codable {
 
 struct LeagueResponseMapper: DTOMapper {
     static func map(_ dto: LeagueResponse) -> League {
-    
         var url: URL? = nil
         
         if let urlString = dto.imageUrl {

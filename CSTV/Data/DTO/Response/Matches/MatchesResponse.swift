@@ -22,7 +22,6 @@ struct MatchesResponse: Codable {
 
 struct MatchesResponseMapper: DTOMapper {
     static func map(_ dto: MatchesResponse) -> Matches {
-        
         var adv: [Adversary] = []
         
         for adversary in dto.adversary {
@@ -30,7 +29,7 @@ struct MatchesResponseMapper: DTOMapper {
         }
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-ddd'T'HH:mm:ss.SSSXXX"
+        formatter.dateFormat = "yyyy-MM-ddd'T'HH:mm:ssZ"
         let date = formatter.date(from: dto.date ?? "") ?? Date()
         
         return Matches(adversary: adv, league: LeagueResponseMapper.map(dto.league), date: date, status: dto.status)

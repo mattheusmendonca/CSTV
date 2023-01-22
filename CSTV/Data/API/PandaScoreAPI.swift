@@ -9,13 +9,12 @@ import Foundation
 import Moya
 
 enum PandaScoreAPI {
-    case getNextMatches(page: Int)
     case getMatchesHappening
+    case getNextMatches(page: Int)
     case getAllTeams(page: Int)
 }
 
 extension PandaScoreAPI: TargetType, AccessTokenAuthorizable {
-    
     var authorizationType: AuthorizationType? {
         switch self {
         case .getNextMatches, .getMatchesHappening, .getAllTeams:
@@ -52,15 +51,19 @@ extension PandaScoreAPI: TargetType, AccessTokenAuthorizable {
     }
 
     var task: Task {
+        var parameters = [String: Any]()
+        
         switch self {
-        case .getNextMatches(let page):
-            return .requestParameters(parameters: ["page" : page], encoding: JSONEncoding.default)
-            
         case .getMatchesHappening:
             return .requestPlain
             
+        case .getNextMatches(let page):
+            parameters["page"] = page
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
+            
         case .getAllTeams(let page):
-            return .requestParameters(parameters: ["page" : page], encoding: JSONEncoding.default)
+            parameters["page"] = page
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
         }
     }
 

@@ -23,7 +23,6 @@ struct MatchDetailsResponse: Codable {
 
 struct MatchDetailsResponseMapper: DTOMapper {
     static func map(_ dto: MatchDetailsResponse) -> Players {
-        
         var url: URL? = nil
         
         if let urlString = dto.imageUrlPlayer {

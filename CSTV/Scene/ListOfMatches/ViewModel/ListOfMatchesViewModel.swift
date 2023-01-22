@@ -11,6 +11,7 @@ protocol ListOfMatchesViewModelInput {
     func getListOfMatches()
     func refreshListOfMatches()
     func pagination(indexPath: IndexPath)
+    func goToMatchesDetails(match: Matches)
 }
 
 protocol ListOfMatchesViewModelOutput {

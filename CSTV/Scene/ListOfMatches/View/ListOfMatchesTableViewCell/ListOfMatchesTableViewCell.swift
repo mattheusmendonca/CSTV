@@ -18,10 +18,12 @@ class ListOfMatchesTableViewCell: UITableViewCell {
     @IBOutlet weak var vsLabel: UILabel!
     @IBOutlet weak var leagueImageView: UIImageView!
     @IBOutlet weak var leagueNameLabel: UILabel!
+    @IBOutlet weak var timeLabelView: UIView!
+    @IBOutlet weak var timeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        self.setupElements()
     }
     
     override func prepareForReuse() {
@@ -29,13 +31,29 @@ class ListOfMatchesTableViewCell: UITableViewCell {
         self.firsTeamNameLabel.text?.removeAll()
         self.secondTeamNameLabel.text?.removeAll()
         self.leagueNameLabel.text?.removeAll()
+        self.timeLabel.text?.removeAll()
         self.firstTeamImageView.image = nil
         self.secondTeamImageView.image = nil
         self.leagueImageView.image = nil
     }
     
     func setupElements() {
+        self.timeLabelView.layer.cornerRadius = 16
+        self.containerView.layer.cornerRadius = 16
         
+        self.timeLabelView.layer.masksToBounds = true
+        self.timeLabelView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner]
+        
+        self.timeLabel.font = UIFont.init(name: "Roboto-Regular", size: 8)
+        self.firsTeamNameLabel.font = UIFont.init(name: "Roboto-Regular", size: 10)
+        self.secondTeamNameLabel.font = UIFont.init(name: "Roboto-Regular", size: 10)
+        self.leagueNameLabel.font = UIFont.init(name: "Roboto-Regular", size: 8)
+        self.vsLabel.font = UIFont.init(name: "Roboto-Regular", size: 12)
+    }
+    
+    func setupDate(date: Date) {
+        let dateString = DateFormatter.dateString(initialDate: Date(), endDate: date)
+        self.timeLabel.text = dateString
     }
 
     func setupListOfMatches(match: Matches) {
@@ -50,5 +68,13 @@ class ListOfMatchesTableViewCell: UITableViewCell {
         self.firstTeamImageView.kf.setImage(with: firstTeam.imageUrl)
         self.secondTeamImageView.kf.setImage(with: secondTeam.imageUrl)
         self.leagueImageView.kf.setImage(with: match.league.imageUrl)
+        
+        if match.status == "running" {
+            self.timeLabel.text = "AGORA"
+            self.timeLabelView.backgroundColor = UIColor.red
+        } else if let date = match.date {
+            self.timeLabelView.backgroundColor = UIColor(named: "DivisionColor")
+            self.setupDate(date: date)
+        }
     }
 }

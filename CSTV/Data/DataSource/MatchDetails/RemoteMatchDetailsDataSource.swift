@@ -15,7 +15,6 @@ class RemoteMatchDetailsDataSource: MatchDetailsDataSource {
     }
     
     func getAllTeams(page: Int, completion: @escaping (Result<[TeamsDetails], MatchDetailsErrorMessage>) -> Void) {
-        
         self.service.getAllTeams(page: page) { result in
             switch result {
             case .success(let teamsResponse):

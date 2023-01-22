@@ -11,13 +11,21 @@ class DefaultMatchesRepository: MatchesRepository {
     private let dataSource: MatchesDataSource
     private var selectedMatches: [Matches] = []
     private var page: Int = 0
-    private let totalPages: Int = 10
+    private let totalPages: Int = 20
    
     let matches: Observable<[Matches]> = .init([])
     let state: Observable<MatchesRepositoryState> = .init(.idle)
     
     init(dataSource: MatchesDataSource = RemoteMatchesDataSource()) {
         self.dataSource = dataSource
+    }
+    
+    func refresh() {
+        self.page = 0
+        self.getNextMatches()
+        self.getMatchesHappening()
+        self.selectedMatches.removeAll()
+        self.matches.value.removeAll()
     }
     
     func getMatchesHappening() {
@@ -29,7 +37,6 @@ class DefaultMatchesRepository: MatchesRepository {
                         self?.selectedMatches.append(match)
                     }
                 }
-            
             case .failure(let error):
                 self?.state.value = .error(.generic(errorMessage: error.message))
             }
@@ -56,7 +63,6 @@ class DefaultMatchesRepository: MatchesRepository {
                 self.matches.value.sort{ $0.status > $1.status }
                 self.selectedMatches.removeAll()
                 self.state.value = .loaded
-                
             case .failure(let error):
                 self.state.value = .error(.generic(errorMessage: error.message))
                 
@@ -64,11 +70,4 @@ class DefaultMatchesRepository: MatchesRepository {
         }
     }
     
-    func refresh() {
-        self.page = 0
-        self.getNextMatches()
-        self.getMatchesHappening()
-        self.selectedMatches.removeAll()
-        self.matches.value.removeAll()
-    }
 }

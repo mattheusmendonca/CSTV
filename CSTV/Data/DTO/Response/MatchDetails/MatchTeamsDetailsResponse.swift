@@ -21,7 +21,6 @@ struct MatchTeamsDetailsResponse: Codable {
 
 struct MatchTeamsDetailsResponseMapper: DTOMapper {
     static func map(_ dto: MatchTeamsDetailsResponse) -> TeamsDetails {
-        
         var url: URL? = nil
         var players: [Players] = []
         

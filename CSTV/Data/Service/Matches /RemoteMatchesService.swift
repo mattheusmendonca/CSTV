@@ -8,10 +8,6 @@
 import Foundation
 import Moya
 
-struct MatchesErrorMessage: Codable, Error {
-    let message: String
-}
-
 class RemoteMatchesService: MatchesService {
     
     private let provider = MoyaProvider<PandaScoreAPI>(plugins: [AccessTokenPluginManager.shared.authPlugin])
@@ -27,7 +23,6 @@ class RemoteMatchesService: MatchesService {
                     let errorResponse = try? response.map(MatchesErrorMessage.self)
                     completion(.failure(errorResponse ?? MatchesErrorMessage(message: error.localizedDescription)))
                 }
-                
             case .failure(let error):
                 completion(.failure(MatchesErrorMessage(message: error.localizedDescription)))
             }
@@ -41,8 +36,7 @@ class RemoteMatchesService: MatchesService {
                 do {
                     let nextMatches = try response.map([MatchesResponse].self)
                     completion(.success(nextMatches))
-                }
-                catch {
+                } catch {
                     let errorResponse = try? response.map(MatchesErrorMessage.self)
                     completion(.failure(errorResponse ?? MatchesErrorMessage(message: error.localizedDescription)))
                 }

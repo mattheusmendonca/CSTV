@@ -29,4 +29,8 @@ class MainCoordinator: NavigationCoordinator {
     func goBackListOfMatches() {
         self.rootViewController.popViewController(animated: true)
     }
+    
+    func goToMatchesDetails(match: Matches) {
+        
+    }
 }

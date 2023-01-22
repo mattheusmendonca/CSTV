@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListOfMatchesViewController" customModule="CSTV" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicatorMatches" destination="6aC-HN-kHb" id="fY9-Dk-Q1P"/>
+                <outlet property="matchesLabel" destination="FdK-Lt-gSH" id="QRU-cO-wcL"/>
                 <outlet property="tableView" destination="z3m-mo-4Be" id="jBO-aM-JIB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -39,28 +39,31 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="6aC-HN-kHb">
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="6aC-HN-kHb">
                     <rect key="frame" x="186" y="416" width="20" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="color" name="DivisionColor"/>
                 </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="BackgroundColor"/>
             <constraints>
+                <constraint firstItem="6aC-HN-kHb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="186" id="0Bn-v1-0sU"/>
                 <constraint firstItem="z3m-mo-4Be" firstAttribute="top" secondItem="FdK-Lt-gSH" secondAttribute="bottom" constant="24" id="AVD-PP-ci2"/>
+                <constraint firstItem="6aC-HN-kHb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="357" id="GyB-2M-Jl7"/>
                 <constraint firstItem="z3m-mo-4Be" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="H9p-xG-WlQ"/>
                 <constraint firstItem="FdK-Lt-gSH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="HhX-e1-1Pd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6aC-HN-kHb" secondAttribute="trailing" constant="187" id="KKK-Ox-YYh"/>
                 <constraint firstAttribute="bottom" secondItem="z3m-mo-4Be" secondAttribute="bottom" id="Vhb-CK-1HE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="z3m-mo-4Be" secondAttribute="trailing" id="bhN-VK-bV5"/>
                 <constraint firstItem="FdK-Lt-gSH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="l2f-xo-ASr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6aC-HN-kHb" secondAttribute="bottom" constant="382" id="r7v-lj-kNl"/>
             </constraints>
-            <point key="canvasLocation" x="11" y="-4"/>
+            <point key="canvasLocation" x="9.9236641221374047" y="-4.2253521126760569"/>
         </view>
     </objects>
     <resources>
         <namedColor name="BackgroundColor">
-            <color red="0.14509803921568629" green="0.14509803921568629" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.14499999582767487" green="0.14499999582767487" blue="0.14499999582767487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="DivisionColor">
             <color red="1" green="1" blue="1" alpha="0.20000000298023224" colorSpace="custom" customColorSpace="sRGB"/>
