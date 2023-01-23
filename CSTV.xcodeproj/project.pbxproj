@@ -47,6 +47,10 @@
 		6BE95F76297DD2B400DDA26E /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BE95F69297DD2B400DDA26E /* Roboto-Medium.ttf */; };
 		6BE95F77297DD2B400DDA26E /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BE95F6A297DD2B400DDA26E /* Roboto-BoldItalic.ttf */; };
 		6BE95F78297DD2B400DDA26E /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BE95F6B297DD2B400DDA26E /* Roboto-Bold.ttf */; };
+		6BE95F7E297DFD2400DDA26E /* MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE95F7C297DFD2400DDA26E /* MatchDetailsViewController.swift */; };
+		6BE95F7F297DFD2400DDA26E /* MatchDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE95F7D297DFD2400DDA26E /* MatchDetailsViewController.xib */; };
+		6BE95F84297DFD6300DDA26E /* MatchDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE95F82297DFD6300DDA26E /* MatchDetailsTableViewCell.swift */; };
+		6BE95F85297DFD6300DDA26E /* MatchDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE95F83297DFD6300DDA26E /* MatchDetailsTableViewCell.xib */; };
 		6BEADCD8297882F100DBDC60 /* DTOMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEADCD7297882F100DBDC60 /* DTOMapper.swift */; };
 		6BEADCE12978CF9300DBDC60 /* MatchesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEADCE02978CF9300DBDC60 /* MatchesService.swift */; };
 		6BEADCE32978CFA800DBDC60 /* RemoteMatchesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEADCE22978CFA800DBDC60 /* RemoteMatchesService.swift */; };
@@ -111,6 +115,10 @@
 		6BE95F69297DD2B400DDA26E /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		6BE95F6A297DD2B400DDA26E /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
 		6BE95F6B297DD2B400DDA26E /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		6BE95F7C297DFD2400DDA26E /* MatchDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewController.swift; sourceTree = "<group>"; };
+		6BE95F7D297DFD2400DDA26E /* MatchDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchDetailsViewController.xib; sourceTree = "<group>"; };
+		6BE95F82297DFD6300DDA26E /* MatchDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		6BE95F83297DFD6300DDA26E /* MatchDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		6BEADCD7297882F100DBDC60 /* DTOMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOMapper.swift; sourceTree = "<group>"; };
 		6BEADCE02978CF9300DBDC60 /* MatchesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesService.swift; sourceTree = "<group>"; };
 		6BEADCE22978CFA800DBDC60 /* RemoteMatchesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMatchesService.swift; sourceTree = "<group>"; };
@@ -266,7 +274,7 @@
 		6B946CEA29771F4F00D570FB /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				6BE95F5E297DD26E00DDA26E /* Fonts */,
+				6BE95F5E297DD26E00DDA26E /* RobotoFont */,
 				6BB19811297DADA300B11A96 /* DateFormatter */,
 				6B18F857297CBC9F001991DB /* ViewModelBindable */,
 				6B9C3F17297A26B400BD4BC0 /* Coordinator */,
@@ -371,7 +379,7 @@
 			path = DateFormatter;
 			sourceTree = "<group>";
 		};
-		6BE95F5E297DD26E00DDA26E /* Fonts */ = {
+		6BE95F5E297DD26E00DDA26E /* RobotoFont */ = {
 			isa = PBXGroup;
 			children = (
 				6BE95F68297DD2B400DDA26E /* LICENSE.txt */,
@@ -388,12 +396,15 @@
 				6BE95F62297DD2B400DDA26E /* Roboto-Thin.ttf */,
 				6BE95F60297DD2B300DDA26E /* Roboto-ThinItalic.ttf */,
 			);
-			path = Fonts;
+			path = RobotoFont;
 			sourceTree = "<group>";
 		};
 		6BE95F79297DD55700DDA26E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6BE95F7B297DFC9A00DDA26E /* MatchDetailsTableViewCell */,
+				6BE95F7C297DFD2400DDA26E /* MatchDetailsViewController.swift */,
+				6BE95F7D297DFD2400DDA26E /* MatchDetailsViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -403,6 +414,15 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6BE95F7B297DFC9A00DDA26E /* MatchDetailsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6BE95F82297DFD6300DDA26E /* MatchDetailsTableViewCell.swift */,
+				6BE95F83297DFD6300DDA26E /* MatchDetailsTableViewCell.xib */,
+			);
+			path = MatchDetailsTableViewCell;
 			sourceTree = "<group>";
 		};
 		6BEADCD5297882BA00DBDC60 /* DTO */ = {
@@ -591,6 +611,7 @@
 				6BE95F72297DD2B400DDA26E /* Roboto-LightItalic.ttf in Resources */,
 				6BE95F73297DD2B400DDA26E /* Roboto-Light.ttf in Resources */,
 				6BE95F6D297DD2B400DDA26E /* Roboto-ThinItalic.ttf in Resources */,
+				6BE95F85297DFD6300DDA26E /* MatchDetailsTableViewCell.xib in Resources */,
 				6B946D0329772F9C00D570FB /* ListOfMatchesTableViewCell.xib in Resources */,
 				6BE95F76297DD2B400DDA26E /* Roboto-Medium.ttf in Resources */,
 				6BE95F78297DD2B400DDA26E /* Roboto-Bold.ttf in Resources */,
@@ -602,6 +623,7 @@
 				6BE95F6E297DD2B400DDA26E /* Roboto-Italic.ttf in Resources */,
 				6BE95F70297DD2B400DDA26E /* Roboto-Regular.ttf in Resources */,
 				6BE95F71297DD2B400DDA26E /* Roboto-Black.ttf in Resources */,
+				6BE95F7F297DFD2400DDA26E /* MatchDetailsViewController.xib in Resources */,
 				6B50806D297652A30086E9E3 /* Assets.xcassets in Resources */,
 				6B946CF5297724F500D570FB /* ListOfMatchesViewController.xib in Resources */,
 			);
@@ -666,6 +688,7 @@
 				6BEADCF02978D8EC00DBDC60 /* Adversary.swift in Sources */,
 				6BEADCEB2978D0B800DBDC60 /* MatchesResponse.swift in Sources */,
 				6B946D0A29777BF400D570FB /* PandaScoreAPI.swift in Sources */,
+				6BE95F84297DFD6300DDA26E /* MatchDetailsTableViewCell.swift in Sources */,
 				6BEADCFB2978E1FE00DBDC60 /* TeamsDetails.swift in Sources */,
 				6BEADD052978E96A00DBDC60 /* LeagueResponse.swift in Sources */,
 				6BEADCF22978D8F900DBDC60 /* Matches.swift in Sources */,
@@ -682,6 +705,7 @@
 				6BEADCF42978DB4200DBDC60 /* AdversarySpecifications.swift in Sources */,
 				6B44593A2979B692004A6311 /* MatchesDataSource.swift in Sources */,
 				6BEADD09297905C600DBDC60 /* MatchTeamsDetailsResponse.swift in Sources */,
+				6BE95F7E297DFD2400DDA26E /* MatchDetailsViewController.swift in Sources */,
 				6B44593E2979B6C2004A6311 /* MatchDetailsDataSource.swift in Sources */,
 				6B946D072977312900D570FB /* DefaultListOfMatchesViewModel.swift in Sources */,
 				6BEADCE72978CFDC00DBDC60 /* RemoteMatchDetailsService.swift in Sources */,
