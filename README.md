@@ -11,7 +11,7 @@ The application consists of a challenge that will comprise the development of an
 # Project execution:
 - Clone repository
 - Run command “pod install” in the project directory 
-- Open cstv.xcworkspace file in XCode
+- Open cstv.xcworkspace file in Xcode
 
 # Project captures:
 
