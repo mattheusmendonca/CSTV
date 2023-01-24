@@ -25,7 +25,7 @@ struct AdversarySpecificationsResponseMapper: DTOMapper {
         if let urlString = dto.imageUrl {
             url = URL(string: urlString)
         }
-        
+    
         return AdversarySpecifications(id: dto.id, name: dto.name, imageUrl: url)
     }
 }

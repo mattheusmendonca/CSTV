@@ -55,7 +55,6 @@ class MatchDetailsTableViewCell: UITableViewCell {
                 self.playerOneNameLabel.text = "\(firstNamePlayerOne) \(lastNamePlayerOne)"
                 self.playerOnePictureImageView.kf.setImage(with: playerOneImageUrl)
             }
-            
             self.playerOneNicknameLabel.text = teamOne.players[index].nickname
         }
         
@@ -64,7 +63,6 @@ class MatchDetailsTableViewCell: UITableViewCell {
                 self.playerTwoNameLabel.text = "\(firstNamePlayerTwo) \(lastNamePlayerTwo)"
                 self.playerTwoPictureImageView.kf.setImage(with: playerTwoImageUrl)
             }
-            
             self.playerTwoNicknameLabel.text = teamTwo.players[index].nickname
         }
     }

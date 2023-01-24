@@ -12,7 +12,7 @@ class AccessTokenPluginManager {
     static let shared = AccessTokenPluginManager()
     
     let authPlugin = AccessTokenPlugin { _ in 
-        "RsIcE8L8pkF12Zl_W6kymOmu2Ye4Q_ToqiXtOVIic7dxqr6jRJ0"
+        "nwcYIRxJtCFh7KMSg3Le9zpFCb0oFgfZWpNXZ9Nz4HXKnAA2wCg"
     }
 }
 

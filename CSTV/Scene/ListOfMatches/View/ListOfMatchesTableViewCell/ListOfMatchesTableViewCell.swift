@@ -9,7 +9,6 @@ import UIKit
 import Kingfisher
 
 class ListOfMatchesTableViewCell: UITableViewCell {
-
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var firsTeamNameLabel: UILabel!
     @IBOutlet weak var secondTeamNameLabel: UILabel!

@@ -17,6 +17,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.appCoordinator = AppCoordinator(windowScene: windowScene)
         self.appCoordinator?.start()
     }
-
 }
 

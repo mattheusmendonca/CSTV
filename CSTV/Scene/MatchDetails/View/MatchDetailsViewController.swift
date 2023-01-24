@@ -56,7 +56,6 @@ class MatchDetailsViewController: UIViewController, ViewModelBindable {
             self.setupDate(date: date)
         }
         
-        
         self.timeLabel.font = UIFont.init(name: "Roboto-Regular", size: 12)
         self.leagueNameLabel.font = UIFont.init(name: "Roboto-Regular", size: 18)
         self.vsLabel.font = UIFont.init(name: "Roboto-Regular", size: 12)
@@ -83,7 +82,6 @@ class MatchDetailsViewController: UIViewController, ViewModelBindable {
     @IBAction func backButtonTapped(_ sender: Any) {
         self.viewModel?.goBack()
     }
-    
 }
 
 extension MatchDetailsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -94,7 +92,6 @@ extension MatchDetailsViewController: UITableViewDelegate, UITableViewDataSource
         }
         return 0
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let teams = self.viewModel?.teams.value else { return UITableViewCell() }

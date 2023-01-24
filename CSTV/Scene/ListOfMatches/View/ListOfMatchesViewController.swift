@@ -8,12 +8,12 @@
 import UIKit
 
 class ListOfMatchesViewController: UIViewController, ViewModelBindable {
-    var viewModel: ListOfMatchesViewModel?
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicatorMatches: UIActivityIndicatorView!
     @IBOutlet weak var matchesLabel: UILabel!
     
+    var viewModel: ListOfMatchesViewModel?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupElements()
