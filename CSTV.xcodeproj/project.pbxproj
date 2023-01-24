@@ -20,6 +20,12 @@
 		6B508066297652A30086E9E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B508065297652A30086E9E3 /* SceneDelegate.swift */; };
 		6B50806D297652A30086E9E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B50806C297652A30086E9E3 /* Assets.xcassets */; };
 		6B508070297652A30086E9E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B50806E297652A30086E9E3 /* LaunchScreen.storyboard */; };
+		6B92C6CE297EF28600484CFC /* MatchDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B92C6CD297EF28600484CFC /* MatchDetailsViewModel.swift */; };
+		6B92C6D0297EF29E00484CFC /* DefaultMatchDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B92C6CF297EF29E00484CFC /* DefaultMatchDetailsViewModel.swift */; };
+		6B92C6D7297F6F6D00484CFC /* Adversary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B92C6D6297F6F6D00484CFC /* Adversary.swift */; };
+		6B92C6D9297F6F7F00484CFC /* AdversarySpecifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B92C6D8297F6F7F00484CFC /* AdversarySpecifications.swift */; };
+		6B92C6DB297F6F8800484CFC /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B92C6DA297F6F8800484CFC /* League.swift */; };
+		6B92C6DD297F6F9000484CFC /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B92C6DC297F6F9000484CFC /* Matches.swift */; };
 		6B946CEC29771F9E00D570FB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B946CEB29771F9E00D570FB /* AppCoordinator.swift */; };
 		6B946CF12977244000D570FB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B946CF02977244000D570FB /* MainCoordinator.swift */; };
 		6B946CF4297724F500D570FB /* ListOfMatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B946CF2297724F500D570FB /* ListOfMatchesViewController.swift */; };
@@ -57,10 +63,6 @@
 		6BEADCE52978CFC400DBDC60 /* MatchDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEADCE42978CFC400DBDC60 /* MatchDetailsService.swift */; };
 		6BEADCE72978CFDC00DBDC60 /* RemoteMatchDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEADCE62978CFDC00DBDC60 /* RemoteMatchDetailsService.swift */; };
 		6BEADCEB2978D0B800DBDC60 /* MatchesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEADCEA2978D0B800DBDC60 /* MatchesResponse.swift */; };
-		6BEADCF02978D8EC00DBDC60 /* Adversary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEADCEF2978D8EC00DBDC60 /* Adversary.swift */; };
-		6BEADCF22978D8F900DBDC60 /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEADCF12978D8F900DBDC60 /* Matches.swift */; };
-		6BEADCF42978DB4200DBDC60 /* AdversarySpecifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEADCF32978DB4200DBDC60 /* AdversarySpecifications.swift */; };
-		6BEADCF62978DF0D00DBDC60 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEADCF52978DF0D00DBDC60 /* League.swift */; };
 		6BEADCFB2978E1FE00DBDC60 /* TeamsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEADCFA2978E1FE00DBDC60 /* TeamsDetails.swift */; };
 		6BEADCFD2978E22D00DBDC60 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEADCFC2978E22D00DBDC60 /* Players.swift */; };
 		6BEADCFF2978E40200DBDC60 /* AdversaryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEADCFE2978E40200DBDC60 /* AdversaryResponse.swift */; };
@@ -88,6 +90,12 @@
 		6B50806C297652A30086E9E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B50806F297652A30086E9E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B508071297652A30086E9E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B92C6CD297EF28600484CFC /* MatchDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewModel.swift; sourceTree = "<group>"; };
+		6B92C6CF297EF29E00484CFC /* DefaultMatchDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMatchDetailsViewModel.swift; sourceTree = "<group>"; };
+		6B92C6D6297F6F6D00484CFC /* Adversary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adversary.swift; sourceTree = "<group>"; };
+		6B92C6D8297F6F7F00484CFC /* AdversarySpecifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdversarySpecifications.swift; sourceTree = "<group>"; };
+		6B92C6DA297F6F8800484CFC /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		6B92C6DC297F6F9000484CFC /* Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
 		6B946CEB29771F9E00D570FB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		6B946CF02977244000D570FB /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		6B946CF2297724F500D570FB /* ListOfMatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMatchesViewController.swift; sourceTree = "<group>"; };
@@ -125,10 +133,6 @@
 		6BEADCE42978CFC400DBDC60 /* MatchDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsService.swift; sourceTree = "<group>"; };
 		6BEADCE62978CFDC00DBDC60 /* RemoteMatchDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMatchDetailsService.swift; sourceTree = "<group>"; };
 		6BEADCEA2978D0B800DBDC60 /* MatchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesResponse.swift; sourceTree = "<group>"; };
-		6BEADCEF2978D8EC00DBDC60 /* Adversary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adversary.swift; sourceTree = "<group>"; };
-		6BEADCF12978D8F900DBDC60 /* Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
-		6BEADCF32978DB4200DBDC60 /* AdversarySpecifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdversarySpecifications.swift; sourceTree = "<group>"; };
-		6BEADCF52978DF0D00DBDC60 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		6BEADCFA2978E1FE00DBDC60 /* TeamsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsDetails.swift; sourceTree = "<group>"; };
 		6BEADCFC2978E22D00DBDC60 /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		6BEADCFE2978E40200DBDC60 /* AdversaryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdversaryResponse.swift; sourceTree = "<group>"; };
@@ -229,6 +233,17 @@
 			path = CSTV;
 			sourceTree = "<group>";
 		};
+		6B92C6D5297F6F3E00484CFC /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				6B92C6D6297F6F6D00484CFC /* Adversary.swift */,
+				6B92C6D8297F6F7F00484CFC /* AdversarySpecifications.swift */,
+				6B92C6DA297F6F8800484CFC /* League.swift */,
+				6B92C6DC297F6F9000484CFC /* Matches.swift */,
+			);
+			path = Matches;
+			sourceTree = "<group>";
+		};
 		6B946CE529771F1800D570FB /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,7 +280,7 @@
 		6B946CE829771F3600D570FB /* Model  */ = {
 			isa = PBXGroup;
 			children = (
-				6BEADCED2978D8C200DBDC60 /* Matches */,
+				6B92C6D5297F6F3E00484CFC /* Matches */,
 				6BEADCEE2978D8CC00DBDC60 /* MatchDetails */,
 			);
 			path = "Model ";
@@ -412,6 +427,8 @@
 		6BE95F7A297DD55E00DDA26E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6B92C6CD297EF28600484CFC /* MatchDetailsViewModel.swift */,
+				6B92C6CF297EF29E00484CFC /* DefaultMatchDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -516,17 +533,6 @@
 				6BEADD08297905C600DBDC60 /* MatchTeamsDetailsResponse.swift */,
 			);
 			path = MatchDetails;
-			sourceTree = "<group>";
-		};
-		6BEADCED2978D8C200DBDC60 /* Matches */ = {
-			isa = PBXGroup;
-			children = (
-				6BEADCF12978D8F900DBDC60 /* Matches.swift */,
-				6BEADCEF2978D8EC00DBDC60 /* Adversary.swift */,
-				6BEADCF32978DB4200DBDC60 /* AdversarySpecifications.swift */,
-				6BEADCF52978DF0D00DBDC60 /* League.swift */,
-			);
-			path = Matches;
 			sourceTree = "<group>";
 		};
 		6BEADCEE2978D8CC00DBDC60 /* MatchDetails */ = {
@@ -685,13 +691,11 @@
 				6B946D052977311300D570FB /* ListOfMatchesViewModel.swift in Sources */,
 				6B946CEC29771F9E00D570FB /* AppCoordinator.swift in Sources */,
 				6B946CF12977244000D570FB /* MainCoordinator.swift in Sources */,
-				6BEADCF02978D8EC00DBDC60 /* Adversary.swift in Sources */,
 				6BEADCEB2978D0B800DBDC60 /* MatchesResponse.swift in Sources */,
 				6B946D0A29777BF400D570FB /* PandaScoreAPI.swift in Sources */,
 				6BE95F84297DFD6300DDA26E /* MatchDetailsTableViewCell.swift in Sources */,
 				6BEADCFB2978E1FE00DBDC60 /* TeamsDetails.swift in Sources */,
 				6BEADD052978E96A00DBDC60 /* LeagueResponse.swift in Sources */,
-				6BEADCF22978D8F900DBDC60 /* Matches.swift in Sources */,
 				6BA98C49297A1BC9005549DC /* MatchesRepository.swift in Sources */,
 				6BEADCE32978CFA800DBDC60 /* RemoteMatchesService.swift in Sources */,
 				6B4459362979998F004A6311 /* KeychainManager.swift in Sources */,
@@ -699,17 +703,20 @@
 				6BEADCE52978CFC400DBDC60 /* MatchDetailsService.swift in Sources */,
 				6B44593C2979B6AE004A6311 /* RemoteMatchesDataSource.swift in Sources */,
 				6BF55EAE297B0ED40042EFEE /* DefaultMatchDetailsRepository .swift in Sources */,
+				6B92C6CE297EF28600484CFC /* MatchDetailsViewModel.swift in Sources */,
 				6BEADCD8297882F100DBDC60 /* DTOMapper.swift in Sources */,
 				6BA98C4B297A1C86005549DC /* DefaultMatchesRepository.swift in Sources */,
 				6BEADD032978E70300DBDC60 /* AdversarySpecificationsResponse.swift in Sources */,
-				6BEADCF42978DB4200DBDC60 /* AdversarySpecifications.swift in Sources */,
 				6B44593A2979B692004A6311 /* MatchesDataSource.swift in Sources */,
 				6BEADD09297905C600DBDC60 /* MatchTeamsDetailsResponse.swift in Sources */,
+				6B92C6D0297EF29E00484CFC /* DefaultMatchDetailsViewModel.swift in Sources */,
+				6B92C6D9297F6F7F00484CFC /* AdversarySpecifications.swift in Sources */,
 				6BE95F7E297DFD2400DDA26E /* MatchDetailsViewController.swift in Sources */,
 				6B44593E2979B6C2004A6311 /* MatchDetailsDataSource.swift in Sources */,
 				6B946D072977312900D570FB /* DefaultListOfMatchesViewModel.swift in Sources */,
 				6BEADCE72978CFDC00DBDC60 /* RemoteMatchDetailsService.swift in Sources */,
 				6BB19814297DADCF00B11A96 /* DateFormatter.swift in Sources */,
+				6B92C6D7297F6F6D00484CFC /* Adversary.swift in Sources */,
 				6B4459422979C24F004A6311 /* RepositoryState.swift in Sources */,
 				6BEADCFF2978E40200DBDC60 /* AdversaryResponse.swift in Sources */,
 				6B508064297652A30086E9E3 /* AppDelegate.swift in Sources */,
@@ -717,9 +724,10 @@
 				6B508066297652A30086E9E3 /* SceneDelegate.swift in Sources */,
 				6BEADCE12978CF9300DBDC60 /* MatchesService.swift in Sources */,
 				6B946D0229772F9C00D570FB /* ListOfMatchesTableViewCell.swift in Sources */,
-				6BEADCF62978DF0D00DBDC60 /* League.swift in Sources */,
 				6BEADCFD2978E22D00DBDC60 /* Players.swift in Sources */,
 				6B946CFD2977281700D570FB /* Coordinator.swift in Sources */,
+				6B92C6DB297F6F8800484CFC /* League.swift in Sources */,
+				6B92C6DD297F6F9000484CFC /* Matches.swift in Sources */,
 				6B18F859297CBCBB001991DB /* ViewModelBindable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -864,9 +872,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CSTV/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -893,9 +904,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CSTV/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

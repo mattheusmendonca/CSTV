@@ -19,7 +19,7 @@ class MatchDetailsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        self.setupElements()
     }
 
     override func prepareForReuse() {
@@ -33,27 +33,39 @@ class MatchDetailsTableViewCell: UITableViewCell {
     }
     
     func setupElements() {
+        self.playerOneContainerView.layer.masksToBounds = true
+        self.playerOneContainerView.layer.cornerRadius = 16
+        self.playerOneContainerView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
+        self.playerOnePictureImageView.layer.cornerRadius = 8
         
+        self.playerTwoContainerView.layer.masksToBounds = true
+        self.playerTwoContainerView.layer.cornerRadius = 16
+        self.playerTwoContainerView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
+        self.playerTwoPictureImageView.layer.cornerRadius = 8
+        
+        self.playerOneNicknameLabel.font = UIFont.init(name: "Roboto-Regular", size: 14)
+        self.playerTwoNicknameLabel.font = UIFont.init(name: "Roboto-Regular", size: 14)
+        self.playerOneNameLabel.font = UIFont.init(name: "Roboto-Regular", size: 12)
+        self.playerTwoNameLabel.font = UIFont.init(name: "Roboto-Regular", size: 12)
     }
     
     func setupCell(teamOne: TeamsDetails, teamTwo: TeamsDetails, index: Int) {
-        if let firstNamePlayerOne = teamOne.players[index].firstName, let lastNamePlayerOne = teamOne.players[index].lastName {
-            self.playerOneNameLabel.text = "\(firstNamePlayerOne) \(lastNamePlayerOne)"
+        if teamOne.players.count >= index + 1 {
+            if let firstNamePlayerOne = teamOne.players[index].firstName, let lastNamePlayerOne = teamOne.players[index].lastName, let playerOneImageUrl = teamOne.players[index].imageUrl {
+                self.playerOneNameLabel.text = "\(firstNamePlayerOne) \(lastNamePlayerOne)"
+                self.playerOnePictureImageView.kf.setImage(with: playerOneImageUrl)
+            }
+            
+            self.playerOneNicknameLabel.text = teamOne.players[index].nickname
         }
         
-        if let firstNamePlayerTwo = teamTwo.players[index].firstName, let lastNamePlayerTwo = teamTwo.players[index].lastName {
-            self.playerOneNameLabel.text = "\(firstNamePlayerTwo) \(lastNamePlayerTwo)"
-        }
-        
-        self.playerOneNicknameLabel.text = teamOne.players[index].nickname
-        self.playerTwoNicknameLabel.text = teamTwo.players[index].nickname
-        
-        if let playerOneImageUrl = teamOne.players[index].imageUrl {
-            self.playerOnePictureImageView.kf.setImage(with: playerOneImageUrl)
-        }
-        
-        if let playerTwoImageUrl = teamTwo.players[index].imageUrl {
-            self.playerTwoPictureImageView.kf.setImage(with: playerTwoImageUrl)
+        if teamTwo.players.count >= index + 1 {
+            if let firstNamePlayerTwo = teamTwo.players[index].firstName, let lastNamePlayerTwo = teamTwo.players[index].lastName, let playerTwoImageUrl = teamTwo.players[index].imageUrl  {
+                self.playerTwoNameLabel.text = "\(firstNamePlayerTwo) \(lastNamePlayerTwo)"
+                self.playerTwoPictureImageView.kf.setImage(with: playerTwoImageUrl)
+            }
+            
+            self.playerTwoNicknameLabel.text = teamTwo.players[index].nickname
         }
     }
 }

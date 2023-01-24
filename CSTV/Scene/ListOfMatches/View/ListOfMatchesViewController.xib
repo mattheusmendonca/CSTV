@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="z3m-mo-4Be">
-                    <rect key="frame" x="0.0" y="108" width="393" height="744"/>
+                    <rect key="frame" x="0.0" y="147" width="393" height="705"/>
                     <color key="backgroundColor" name="BackgroundColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="fRv-t8-8vz"/>
@@ -30,7 +30,7 @@
                     </connections>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partidas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdK-Lt-gSH">
-                    <rect key="frame" x="24" y="44" width="130" height="40"/>
+                    <rect key="frame" x="24" y="83" width="130" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="130" id="Dc2-5B-mrf"/>
                         <constraint firstAttribute="height" constant="40" id="JmI-cq-9DV"/>
@@ -41,7 +41,7 @@
                 </label>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="6aC-HN-kHb">
                     <rect key="frame" x="186" y="416" width="20" height="20"/>
-                    <color key="color" name="DivisionColor"/>
+                    <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -55,7 +55,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6aC-HN-kHb" secondAttribute="trailing" constant="187" id="KKK-Ox-YYh"/>
                 <constraint firstAttribute="bottom" secondItem="z3m-mo-4Be" secondAttribute="bottom" id="Vhb-CK-1HE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="z3m-mo-4Be" secondAttribute="trailing" id="bhN-VK-bV5"/>
-                <constraint firstItem="FdK-Lt-gSH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="l2f-xo-ASr"/>
+                <constraint firstItem="FdK-Lt-gSH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="l2f-xo-ASr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6aC-HN-kHb" secondAttribute="bottom" constant="382" id="r7v-lj-kNl"/>
             </constraints>
             <point key="canvasLocation" x="9.9236641221374047" y="-4.2253521126760569"/>
@@ -63,10 +63,7 @@
     </objects>
     <resources>
         <namedColor name="BackgroundColor">
-            <color red="0.14499999582767487" green="0.14499999582767487" blue="0.14499999582767487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="DivisionColor">
-            <color red="1" green="1" blue="1" alpha="0.20000000298023224" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.086274509803921567" green="0.086274509803921567" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

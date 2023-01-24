@@ -50,7 +50,7 @@ class DefaultListOfMatchesViewModel: ListOfMatchesViewModel {
     }
     
     func goToMatchesDetails(match: Matches) {
-        self.coordinator?.goToMatchesDetails(match: match)
+        self.coordinator?.goToMatchDetails(match: match)
     }
     
 }

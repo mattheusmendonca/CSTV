@@ -16,7 +16,6 @@ class RemoteMatchDetailsService: MatchDetailsService {
         self.provider.request(.getAllTeams(page: page)) { result in
             switch result {
             case .success(let response):
-                
                 do {
                     let allTeams = try response.map([MatchTeamsDetailsResponse].self)
                     completion(.success(allTeams))

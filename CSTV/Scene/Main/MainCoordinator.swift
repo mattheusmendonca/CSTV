@@ -30,7 +30,11 @@ class MainCoordinator: NavigationCoordinator {
         self.rootViewController.popViewController(animated: true)
     }
     
-    func goToMatchesDetails(match: Matches) {
-        
+    func goToMatchDetails(match: Matches) {
+        let matchDetailsViewController = MatchDetailsViewController()
+        let matchDetailsViewModel: MatchDetailsViewModel = DefaultMatchDetailsViewModel(coordinator: self, match: match)
+        matchDetailsViewController.bind(to: matchDetailsViewModel)
+        matchDetailsViewController.modalPresentationStyle = .fullScreen
+        self.rootViewController.pushViewController(matchDetailsViewController, animated: true)
     }
 }
