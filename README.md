@@ -16,9 +16,9 @@ The application consists of a challenge that will comprise the development of an
 # Project captures:
 
 <div>
-  <img src="https://user-images.githubusercontent.com/73153461/214353498-f9b4a5fc-a540-48a5-a68f-674aba5d01bf.PNG" width=300 />
-  <img src="https://user-images.githubusercontent.com/73153461/214353506-eaffadf3-ed83-424c-9d13-bdfbb8b87541.PNG" width=300 />
-  <img src="https://user-images.githubusercontent.com/73153461/214353503-0dffb18e-f31b-499a-af27-c4bb12dcc90a.PNG" width=300 />
+  <img src="https://user-images.githubusercontent.com/73153461/214353498-f9b4a5fc-a540-48a5-a68f-674aba5d01bf.PNG" width=200 />
+  <img src="https://user-images.githubusercontent.com/73153461/214353506-eaffadf3-ed83-424c-9d13-bdfbb8b87541.PNG" width=200 />
+  <img src="https://user-images.githubusercontent.com/73153461/214353503-0dffb18e-f31b-499a-af27-c4bb12dcc90a.PNG" width=200 />
 <div/>
 
 # Project running:
